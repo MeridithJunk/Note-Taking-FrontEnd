@@ -22,7 +22,7 @@ describe('Note Tests', () => {
     });
 
     it("Should render note contents once note is loaded", async () => {
-        const { getByText } = render(<App/>)
+        const {getByText} = render(<App/>)
 
         await waitFor(() => {
             expect(screen.getByText(`Notes Title`)).toBeInTheDocument()
