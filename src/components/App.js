@@ -23,10 +23,22 @@ export default function App() {
 
     return (
         <div>
-            <h1>{note.title}</h1>
-            <textarea  value={this.state.value} onChange={this.handleChange} >
-
-            </textarea>
+            <div className="note-container">
+                <h1 className="note_heading">All Notes</h1>
+                <h1>{note.title}</h1>
+            </div>
+            <div className="note-container">
+                <h1 className="note_heading">Create Note</h1>
+                <form className="form">
+                    <input required type="text"
+                           placeholder="Enter Note Title"/>
+                    <br/><br/>
+                    <textarea required rows="5" cols="28"
+                              placeholder="Enter Note"/>
+                    <br/><br/>
+                    <button>Note</button>
+                </form>
+            </div>
         </div>
     )
 }
